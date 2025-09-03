@@ -1,40 +1,76 @@
 <html>
     <head>
-        <title>Cuadritos</title>
+        <title>LOS DIVS</title>
     </head>
 
     <style>
-        .c1{
-            background-color: blue;
-            width: 200px;
-            height: 200px;
+        .principal{
+            display: flex;
+            flex-direction: row;
         }
-        .c2{
-            background-color: brown;
-            width: 200px;
-            height: 200px;
+
+        .section1{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section2{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .div1{
+            background-color: bisque;
+        }
+        .div2{
+            background-color: lightblue;
         }
     </style>
 
-    <body>
-        <!-- Cabezera -->
+    <body class="principal">
         <section class="section1">
-            <div class="c1">
-                
+            
+            <!-- Primer concepto -->
+            <div class="div1">
+                <pre>
+                    La programación es el proceso de escribir un conjunto 
+                    ordenado de instrucciones, o código, usando un lenguaje 
+                    de programación para que una computadora realice una tarea 
+                    específica, resuelva un problema o cree un programa o 
+                    aplicación. 
+                </pre>
             </div>
-            <div class="c2">
 
+            <div class="div2">
+                <img
+                    width="250px"
+                    height="200px"
+                    alt="Imagen de codigo"
+                    src="https://cdn.aicad.es/asset/img/3/que-es-el-codigo-en-la-comunicacion-y-por-que-es-tan-importante.png"
+                >
             </div>
         </section>
 
-        <!-- Cuerpo -->
+        <!-- Segundo conepto -->
         <section class="section2">
-            <div class="c1">
-                
+            <div class="div1">
+                <pre>
+                    El fútbol, futbol​ o balompié​ es un deporte de equipo jugado
+                     entre dos conjuntos de once jugadores cada uno, mientras 
+                     los árbitros se ocupan de que las normas se cumplan correctamente. 
+                     Es, ampliamente, considerado el deporte más popular del mundo.
+                </pre>
             </div>
-            <div class="c2">
 
+            <div class="div2">
+                <img
+                    width="250px"
+                    height="200px"
+                    alt="Imagen de futbol​"
+                    src="https://s1.significados.com/foto/imagen-de-destaque-que-es-el-futbol.-jugadores-y-balon.jpg?class=ogImageRectangle"
+                >
             </div>
         </section>
+
     </body>
 </html>
