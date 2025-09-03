@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo justify-content</title>
+  <style>
+    .contenedor {
+      display: flex;
+      border: 2px solid black;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      background: lightblue;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid navy;
+    }
+
+    /* Distintos ejemplos */
+    .inicio   { justify-content: flex-start; }   /* alineados al inicio */
+    .final    { justify-content: flex-end; }     /* alineados al final */
+    .centro   { justify-content: center; }       /* centrados */
+    .entre    { justify-content: space-between; }/* espacio entre ellos */
+    .alrededor{ justify-content: space-around; } /* espacio alrededor */
+    .uniforme { justify-content: space-evenly; } /* espacio igual */
+  </style>
+</head>
+<body>
+  <h3>flex-start</h3>
+  <div class="contenedor inicio">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>flex-end</h3>
+  <div class="contenedor final">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>center</h3>
+  <div class="contenedor centro">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>space-between</h3>
+  <div class="contenedor entre">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>space-around</h3>
+  <div class="contenedor alrededor">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>space-evenly</h3>
+  <div class="contenedor uniforme">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+</body>
+</html>
