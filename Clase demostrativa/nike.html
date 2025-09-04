@@ -7,53 +7,96 @@
 </head>
 
 <style>
-    .menu{
-
+    .section1{
+        display: flex;
+        flex-direction: row;
+        justify-content:  space-between;
+        font-family:Arial, Helvetica, sans-serif;
     }
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row; 
+    }
+
+    #menu1{
+        padding: 10px;
+    }
+
+    .menuNav{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .busqueda{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .busqueda1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .iconos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
 </style>
 
 <body>
     <section class="section1">
+        <!-- Div: izquierda -->
         <div class="logo">
             <img
             alt="logo de nike"
+            height="25px"
             width="60px"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXkAAACGCAMAAAAPbgp3AAAAhFBMVEX///8AAAD8/PzZ2dnq6ury8vL29va4uLjBwcHh4eHExMTz8/OUlJTT09Pd3d2enp5ISEjMzMyoqKhra2tOTk55eXlxcXGOjo4kJCQICAisrKw7OzuIiIizs7NWVlYvLy9jY2MWFhY5OTkYGBh/f38rKytUVFRdXV1nZ2cfHx9CQkKZmZm4FStmAAAHQUlEQVR4nO2d6XqyOhCATxBQKFbBrVKpS+1nq/d/f0eFVtQEskw24P1vMsyDk9ky/PcfD17A9bMOUV4WuiVoK0dXtwS2E4RcVmN6ghakVXiD/Sbj+uUMAYvSIpze6Ihmr3w/XqE+rDSt4TX9Rmib+pw/H6EjqDgtwc3m6Mwm5l4hQ4j/xy3FH8zWF7WjvYAzHiI0hhOpBTjxYnzVOlpzm5kLPdS98vQ4wegfKpgMhZZyz0u8A4nVdNxs8vardhQJBkAvl6VCGMEajduf3bSO1pkjuuDlmFhDSNZkvHBV0vrZzABY54/LQqn4Og1mGI3LWkdLUTNz5eqPLoX/OI0luMRJdxxhQs7FdbEuSYnlbNiXD2pHkx7M2mm+XJekfMIZ7N8ftS7uzfwR5usdgJZrDL1o+qx1NIXLbL0WS3Yu5Q0nSA4YrSM050xF4ngpjNi2O18LznHSF1btKPIg9zkWq64gF7UWL9y/4bWO3vkqHkQ2vwsDndYW48UR5jgtEMzNPBP9rvwFvLBtDLHH6S8ncL+v/7d2m535IK9skPgYwG/Zuy3fVmNzjpN+qtQuVPEg4m9vG0hY3nz+KhsktumLlI1L286kbGAyQbIhazznn6wQZ1/apF0tB242/6xTO5pJ63JMy9u0J2fjY1MxT2ZmJMfMXBiWN2pJTcQZRkeSru/MjARv5g/vLvM5l7iTIThBenjK9mKBzM1guI8bgANj4wiySbXveGMk2fCu7rdrsjd/9tgplY7QVKaZuRI+7NjUPKUfrtbUaufuRmXAfdiymQdsXJmKeWSbyPNmbjy6Vc07YF9vHWBUfKipC+0f921Wbt7rz0k5dgLygqZ7Ho08QomajRXghzRx0h1qzMwF73nzZjSyevGC4TgtUGRmrnw8bw9db1GP0xuxHKe/SEkBk0gwAsj3pqTy3AFGx0ik6Z1dSpwIFt89ZomT7hhLD5oewGaMLM1U0qUdscyVR+0jrByqDndAnHhVU0+q4ATaN0MF1tYgpF4QMYKELU66A7A9jwHCa2KTtfGyOaEDjAr1ZuZKShDHFt/GC/fsHnuJ5UjTvxsTQ+XY4M/7w2gnonUVKWAiRK/X+DbiXvJBV08ioyAFTCQmSjXSJ1Q9rwlfnFTmR2JBmwKyiTS228bD3JRhR2VuBgcubVAw1SsZgeGJ32MvoTQ3g+OlSjrjqoFBOoHQOvpKlOZmsDyVQ8oY5dy42XwLonZ0MCH9/Vh6vceYI9Yf7AV9xxsr3WYmp9o/MGLUhB8vqDrAqHhPDbGgrzWC6n49nCDhqWyQ2JhjPus6liOdwrGXrKtZGJSH6tVKq0syd0C8jMfH0axORUzt9QEd7Qd+LJqKeQJqIAEUhLR8GeUXkeNIIMdOAGwgARg0pUqV3U6ku+1CjA2890LMDt+hyL3x7qZRgWGamck5UcmuYEjoy2AP57GXgb8pDIJTfxsrF1+uFMKVDRImmpmcfr3wOdKyHI6bHrZy1G6omcmh70mR8p8NysMdoYGdewJMXeKgDPRzcHeAUWGumclZMDzLF+Bb74cL3g4wKjT1bzBAeb7mbIF8y+EJMgGGQfYVPgCe7ylUI9wa4fRG9ckKMTT2bzDAXFUTmnTjZd+0F0+5Md/MXPHZa/drzuS2x35Thh1tbWLMDHge75vZiPrxQp7reMMOM5NTOSeKDMvd/4th34IqmIDONjF2uB9znNL8rf04qh3QA8PWGjOTM6x/JDLrKCY3xflueKoZAQaIjCluconqH6qS5Xgy6g9957du4jh+MBxkq82YKUwQxC4zkwMWz/ys38e7N4AmR2bs8WbK+Bo0BYtN3kwZcuO2HczsCJow4K8CWsJXYqOZKYAv7ytD4Ct8JqAirpTCyvxUZCXVDcTGshP/PJZuWMpRxgA+6V0HmW4tsmNemxgXdI025mBYN6oAq/qHNYjvJpiZAkVpRBBManoXR36JCAigr/CZgyXuvCWFVRZUZnK5MbQbVQwdSV02TG8T40W3XutooJkp0K3ZahoSNGEx2M431cwUCI2ekomNhVUm5FyNEcXOwiobMJNKYLGvf4MH0Z4PeFRNeteNaWVYmwurbBjVemBr/wYXBlUDmxs04TElZaZhBLNmjHBuGh404aG+hCyPtpmZgspRiQpoQ9BEQMI0E3raETQR0GhutM9G1Ywmta9T/bNRNaOl5cagoYX60HDGNqt/g5+KEdwyWJsyG9UAVJZHLG96B0Zd2sz2pndwOK+BM3K0v+kdHEeBvWlpjqAOihGtYnRmhgTXwA9ajp03U4G8sqC9N1YVwTJGjh4Tvp9iPBKyCI24SqYAYIMzzbrXnRbIY9aQz9bYQgA0kXnWpQiYET9nP2dx50Py0BPrcd13aucn423BmZ6a3nktnT67uf+a9bV+X7UxxEwNUJukc2Tg8Kk+bvN5WIRdLgwcJ4ymxHGTP7tJEnrdcSoPd5hG84/x7u1ti5bLz5/dYRUlYeB2Ohfjf6DvbxttVz8uAAAAAElFTkSuQmCC">
         </div>
 
+        <!-- Div: centro -->
         <div class="menu">
-            <nav>
-                <p>New</p>
-                <p>Men</p>
-                <p>Women</p>
-                <p>kids</p>
-                <p>Jordan</p>
-                <p>Sport</p>
-            </nav>
+            <div id="menu1"><b>New</b></div>
+            <div id="menu1"><b>Men</b></div>
+            <div id="menu1"><b>Women</b></div>
+            <div id="menu1"><b>kids</b></div>
+            <div id="menu1"><b>Jordan</b></div>
+            <div id="menu1"><b>Sport</b></div>
         </div>
 
+
+        <!-- Div: derecha -->
         <div class="busqueda">
-            <div>
-                <div>
-                    <img
-                    width="40px"
-                    src="https://static.vecteezy.com/system/resources/previews/009/652/218/non_2x/magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg">
-                </div>
-                <div>
-                    <input placeholder="Buscar">
-                </div>
+            <!-- busqueda -->
+            <div class="busqueda1">
+                <img
+                height="30px"
+                width="30px"
+                src="https://images.icon-icons.com/3106/PNG/512/magnifying_glass_search_find_icon_191670.png">
+                <input placeholder="Buscar">
             </div>
-            <div>
-                <div>
-                    <img
-                    width="25px"
-                    src="https://images.vexels.com/media/users/3/137310/isolated/preview/cf5a1b0cf2ebd6f2d7f707ff9317495e-logotipo-de-corazon-de-trazo.png">
-                </div>
-                <div>
-                    <img
-                    width="30px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuw31UB8z4jdScAolVhVFnJH9JrKjuATdabKVO59NAx0GI8OtV">
-                </div>
+
+            <!-- Iconos -->
+            <div class="iconos">
+                <img
+                height="20px"
+                width="20px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyM0UrFkyMBJbQb9ndp5XDfvuz8-VVMzWobQ&s">
+
+                <img
+                height="22px"
+                width="24px"
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4H2x9QmAeP1yLf0RbG-NLZZ4Za9vpa1hkWMlINxz722rU3MXJ">
             </div>
 
         </div>
