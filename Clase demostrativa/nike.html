@@ -12,6 +12,7 @@
         flex-direction: row;
         justify-content:  space-between;
         font-family:Arial, Helvetica, sans-serif;
+        padding: 10px;
     }
 
     .logo{
@@ -33,21 +34,80 @@
         flex-direction: row;
     }
 
-    .busqueda{
+    .busqueda {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly; /* separa busqueda1 e iconos */
+        align-items: center;            /* centra verticalmente */
+        width: 100%;                    /* <<< clave para que se note el space-around */
+        max-width: 500px; /* opcional: controla el ancho si no quieres que se estire demasiado */
     }
+
 
     .busqueda1{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        background-color: lightgray ;
+        border-radius: 20px;
     }
 
     .iconos{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        
+    }
+    #entrada{
+        height: 30px;
+        border-radius: 50px;
+        background-color: lightgray;
+    }
+
+    #iconoBusqueda{
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+        padding-right: 10px;
+    }
+
+    .fondoPrincipal {
+        background: url("https://wallpapers.com/images/featured/fondos-de-pantalla-de-nike-geniales-g2tprt4w49a0ps3t.jpg") no-repeat center center / cover;
+        width: 100%;
+        height: 100vh;  
+        display: flex;               /* 🔑 Activa Flexbox */
+        flex-direction: column;      /* mensaje arriba y botón abajo */
+        justify-content: end;     /* centra verticalmente */
+        align-items: center;         /* centra horizontalmente */
+        color: white;                /* para que resalte el texto */
+        text-align: center;          /* centra el texto */
+        padding-bottom: 40px;
+    }
+    .fondoPrincipal h1 {
+        font-size: 5vw; /* ocupa 10% del ancho de la pantalla */
+    }
+
+    .mensaje{
+        margin-bottom: 2px;
+    }
+
+    .fondoPrincipal button {
+        background-color: black;   /* fondo negro */
+        color: white;              /* texto blanco */
+        border: none;              /* sin bordes */
+        padding: 15px 40px;        /* tamaño del botón */
+        font-size: 18px;           /* tamaño de letra */
+        font-weight: bold;         /* negrita */
+        text-transform: uppercase; /* texto en mayúsculas */
+        border-radius: 30px;       /* bordes redondeados */
+        cursor: pointer;           /* cursor tipo mano */
+        transition: all 0.3s ease; /* animación suave */
+    }
+
+/* Efecto al pasar el mouse */
+    .fondoPrincipal button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        transform: scale(1.05);    /* agranda un poquito */
     }
 
 
@@ -79,32 +139,44 @@
         <div class="busqueda">
             <!-- busqueda -->
             <div class="busqueda1">
-                <img
-                height="30px"
-                width="30px"
-                src="https://images.icon-icons.com/3106/PNG/512/magnifying_glass_search_find_icon_191670.png">
-                <input placeholder="Buscar">
+                <div id="iconoBusqueda">   
+                    <img
+                    height="30px"
+                    width="30px"
+                    src="https://images.icon-icons.com/3106/PNG/512/magnifying_glass_search_find_icon_191670.png">
+                </div>
+                <div>
+                    <input id="entrada" placeholder="Buscar">
+                </div>
             </div>
 
             <!-- Iconos -->
             <div class="iconos">
-                <img
-                height="20px"
-                width="20px"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyM0UrFkyMBJbQb9ndp5XDfvuz8-VVMzWobQ&s">
-
-                <img
-                height="22px"
-                width="24px"
-                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4H2x9QmAeP1yLf0RbG-NLZZ4Za9vpa1hkWMlINxz722rU3MXJ">
+                <div>
+                    <img
+                    height="20px"
+                    width="20px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyM0UrFkyMBJbQb9ndp5XDfvuz8-VVMzWobQ&s">
+                </div>
+                <div>
+                    <img
+                    height="22px"
+                    width="24px"
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4H2x9QmAeP1yLf0RbG-NLZZ4Za9vpa1hkWMlINxz722rU3MXJ">
+                </div>
             </div>
-
         </div>
     </section>
     <section class="section2">
-        <main>
-
-        </main>
+        <div class="fondoPrincipal">
+            <div id="mensaje">
+                <h1><b>NIKE CITY</b></h1>
+                <p>Inspire by the spirit of life in the city</p>
+            </div>
+            <div>
+                <button>shop</button>
+            </div>
+        </div>
     </section>
 </body>
 </html>
