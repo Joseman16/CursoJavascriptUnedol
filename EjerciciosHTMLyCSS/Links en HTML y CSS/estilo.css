@@ -1,0 +1,27 @@
+h1{
+    color: coral;
+}
+ 
+/*Cuando el link no ha sido visitado*/
+a:link{
+    color: chocolate;
+    text-decoration: none;
+}
+
+/*Cuando el link ya ha sido visitado*/
+a:visited{
+    color: rgb(33, 31, 155);
+    text-decoration: none;
+}
+
+/*Cuando nos ponemos encima del link*/
+a:hover{
+    color: rgb(83, 139, 27);
+    text-decoration: underline;
+}
+
+/*Este es el estado de activo*/
+a:active{
+    color: rgb(24, 22, 22);
+    text-decoration: underline;
+}

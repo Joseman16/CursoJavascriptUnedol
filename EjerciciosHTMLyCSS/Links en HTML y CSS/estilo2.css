@@ -1,0 +1,23 @@
+h1{
+    color: rgb(96, 31, 156);
+}
+
+
+
+/* El evento: sin visitar y visitado*/
+/* Le estamos dando un estilo*/
+a:link, a:visited{
+    background-color: darkmagenta;
+    color: aliceblue;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* El evento: de diseño y activo*/
+/* Le estamos dando un estilo*/
+a:hover, a:active{
+    background-color: rgb(211, 72, 204);
+}

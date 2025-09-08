@@ -1,0 +1,51 @@
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;    
+    /*Agrego border colpasados*/
+    border-collapse: collapse;
+    /*border-spacing: 5px;*/
+    padding: 5px;
+}
+
+caption{
+    color: brown;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    line-height: 70px;
+}   
+
+th{
+    color:aliceblue;
+    background-color: rgb(9, 9, 68);
+}
+
+td{
+    text-align: center;
+}
+
+/*
+even = seleccionar reglones pares
+odd = seleccionar reglones impares
+*/
+
+/*reglones pares*/
+tr:nth-child(even){
+    background-color: antiquewhite;
+}
+
+/*reglones impares*/
+tr:nth-child(odd){
+    background-color: rgb(212, 238, 240);
+}
+
+/*
+th{
+    text-align: end;
+}
+*/
+
+
