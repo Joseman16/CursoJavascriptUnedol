@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista en HTML</title>
+
+    <style>
+        .titulo{
+            text-decoration: underline;
+        }
+        .frutas{
+            list-style-type: decimal;
+            text-decoration: none;
+        }
+    </style>
+  </head> 
+  <!-- 
+    listas ordenasas <ol>
+    listas desordenadas <ul>
+    listas de definición <dl>
+  -->
+  <body>
+    <h1>Lisra No Ordenadas</h1>
+    <ul style="list-style-type: circle">
+      <li>
+        Juan
+        <ul>
+          <li>Tel. 22331220</li>
+          <li>Cel. 0928281122</li>
+        </ul>
+      </li>
+      <li>Sara</li>
+      <li>Karla</li>
+      <li>Pedro</li>
+      <li>
+        Hugo
+        <ul>
+          <li>Tel. 55231299</li>
+          <li>Cel. 0929221188</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Otra lista</h2>
+    <ul style="list-style-type: decimal">
+      <li class="titulo">Jugos</li>
+      <ul class="frutas">
+        <li>Manzana</li>
+        <li>Piña</li>
+        <li>Naranja</li>
+        <li>Uva</li>
+      </ul>
+      <br />
+      <li>
+        Sodas:
+        <ul style="list-style-type: decimal">
+          <li>Coca cola</li>
+          <li>Pepsi</li>
+          <li>Fiora banti</li>
+          <li>Tropical</li>
+          <li>Inka cola</li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        Pescados:
+        <ul style="list-style-type: decimal">
+          <li>Albacora</li>
+          <li>Corvina</li>
+          <li>Bagre</li>
+          <li>>Atun</li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        Lacteos:
+        <ul style="list-style-type: decimal">
+          <li>Leche</li>
+          <li>Yogurt</li>
+          <li>Queso</li>
+          <li>Mantequilla</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

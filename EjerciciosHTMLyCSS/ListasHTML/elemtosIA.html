@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos de Bordes Luminosos</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .glow-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-card h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        /* Efecto 1: Resplandor básico */
+        .glow-basic {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            box-shadow: 
+                0 0 20px rgba(255, 107, 107, 0.6),
+                0 0 40px rgba(78, 205, 196, 0.4),
+                0 0 60px rgba(255, 107, 107, 0.2);
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 
+                    0 0 20px rgba(255, 107, 107, 0.6),
+                    0 0 40px rgba(78, 205, 196, 0.4),
+                    0 0 60px rgba(255, 107, 107, 0.2);
+                transform: scale(1);
+            }
+            100% {
+                box-shadow: 
+                    0 0 30px rgba(255, 107, 107, 0.8),
+                    0 0 60px rgba(78, 205, 196, 0.6),
+                    0 0 90px rgba(255, 107, 107, 0.4);
+                transform: scale(1.05);
+            }
+        }
+
+        /* Efecto 2: Borde neón */
+        .glow-neon {
+            width: 200px;
+            height: 200px;
+            background: #1a1a2e;
+            border: 3px solid #00f5ff;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            position: relative;
+            box-shadow: 
+                inset 0 0 20px rgba(0, 245, 255, 0.2),
+                0 0 20px rgba(0, 245, 255, 0.6),
+                0 0 40px rgba(0, 245, 255, 0.4);
+        }
+
+        .glow-neon::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #00f5ff, #ff00ff, #00f5ff);
+            border-radius: 20px;
+            z-index: -1;
+            filter: blur(10px);
+            animation: rotateGradient 3s linear infinite;
+        }
+
+        @keyframes rotateGradient {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Efecto 3: Múltiples capas */
+        .glow-layers {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            box-shadow: 
+                0 0 10px rgba(102, 126, 234, 0.8),
+                0 0 20px rgba(102, 126, 234, 0.6),
+                0 0 40px rgba(102, 126, 234, 0.4),
+                0 0 80px rgba(118, 75, 162, 0.3);
+        }
+
+        .glow-layers::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: conic-gradient(
+                from 0deg,
+                #667eea,
+                #764ba2,
+                #667eea,
+                #764ba2,
+                #667eea
+            );
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(15px);
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Efecto 4: Resplandor de imagen */
+        .glow-image {
+            width: 200px;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23ff7e5f;stop-opacity:1" /><stop offset="100%" style="stop-color:%23feb47b;stop-opacity:1" /></linearGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23grad)"/><text x="100" y="110" text-anchor="middle" fill="white" font-size="24" font-weight="bold">IMG</text></svg>') center/cover;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            position: relative;
+            filter: drop-shadow(0 0 20px rgba(255, 126, 95, 0.6))
+                    drop-shadow(0 0 40px rgba(254, 180, 123, 0.4));
+            animation: floatGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes floatGlow {
+            0%, 100% {
+                transform: translateY(0px);
+                filter: drop-shadow(0 0 20px rgba(255, 126, 95, 0.6))
+                        drop-shadow(0 0 40px rgba(254, 180, 123, 0.4));
+            }
+            50% {
+                transform: translateY(-10px);
+                filter: drop-shadow(0 0 30px rgba(255, 126, 95, 0.8))
+                        drop-shadow(0 0 60px rgba(254, 180, 123, 0.6));
+            }
+        }
+
+        /* Efecto 5: Borde animado */
+        .glow-animated {
+            width: 200px;
+            height: 200px;
+            background: #16213e;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-animated::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent,
+                transparent,
+                transparent,
+                #00ccff,
+                transparent,
+                transparent,
+                transparent
+            );
+            animation: rotate 4s linear infinite;
+        }
+
+        .glow-animated::after {
+            content: '';
+            position: absolute;
+            inset: 5px;
+            background: #16213e;
+            border-radius: 15px;
+        }
+
+        .glow-animated .content {
+            position: absolute;
+            inset: 5px;
+            background: linear-gradient(45deg, #0f3460, #16213e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ccff;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Efecto 6: Resplandor RGB */
+        .glow-rgb {
+            width: 200px;
+            height: 200px;
+            background: #000;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            position: relative;
+            box-shadow: 
+                0 0 20px #ff0000,
+                0 0 40px #00ff00,
+                0 0 60px #0000ff;
+            animation: rgbShift 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes rgbShift {
+            0% {
+                box-shadow: 
+                    0 0 20px #ff0000,
+                    0 0 40px #00ff00,
+                    0 0 60px #0000ff;
+            }
+            33% {
+                box-shadow: 
+                    0 0 20px #00ff00,
+                    0 0 40px #0000ff,
+                    0 0 60px #ff0000;
+            }
+            66% {
+                box-shadow: 
+                    0 0 20px #0000ff,
+                    0 0 40px #ff0000,
+                    0 0 60px #00ff00;
+            }
+            100% {
+                box-shadow: 
+                    0 0 30px #ff0000,
+                    0 0 50px #00ff00,
+                    0 0 70px #0000ff;
+            }
+        }
+
+        .description {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Efectos de Bordes Luminosos</h1>
+    
+    <div class="container">
+        <div class="glow-card">
+            <h3>Resplandor Básico</h3>
+            <div class="glow-basic"></div>
+            <p class="description">
+                Efecto de resplandor básico con box-shadow y animación de pulso. 
+                Ideal para elementos que necesitan llamar la atención.
+            </p>
+        </div>
+
+        <div class="glow-card">
+            <h3>Borde Neón</h3>
+            <div class="glow-neon"></div>
+            <p class="description">
+                Efecto neón con borde sólido y gradiente rotativo en el fondo. 
+                Perfecto para un estilo futurista.
+            </p>
+        </div>
+
+        <div class="glow-card">
+            <h3>Múltiples Capas</h3>
+            <div class="glow-layers"></div>
+            <p class="description">
+                Resplandor en capas con gradiente cónico giratorio. 
+                Crea un efecto de profundidad y movimiento.
+            </p>
+        </div>
+
+        <div class="glow-card">
+            <h3>Imagen con Resplandor</h3>
+            <div class="glow-image"></div>
+            <p class="description">
+                Usa drop-shadow para crear resplandor en imágenes. 
+                Incluye animación flotante para mayor dinamismo.
+            </p>
+        </div>
+
+        <div class="glow-card">
+            <h3>Borde Animado</h3>
+            <div class="glow-animated">
+                <div class="content">TEXTO</div>
+            </div>
+            <p class="description">
+                Borde luminoso que rota alrededor del elemento. 
+                Efecto muy llamativo para botones o tarjetas importantes.
+            </p>
+        </div>
+
+        <div class="glow-card">
+            <h3>RGB Dinámico</h3>
+            <div class="glow-rgb"></div>
+            <p class="description">
+                Resplandor que cambia entre colores RGB. 
+                Perfecto para efectos gaming o tecnológicos.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

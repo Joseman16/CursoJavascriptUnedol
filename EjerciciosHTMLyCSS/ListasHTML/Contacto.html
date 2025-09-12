@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<style>
+    .yo{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        /* posición X  --  posición X -- Desenfoque -- Extensión -- Color*/
+        box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7); 
+        margin: 40px; 
+    }
+    .yo2{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        /* posición X  --  posición X -- Desenfoque -- Extensión -- Color*/
+        box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7); 
+        margin: 40px;
+    }
+
+    .yo2-1{
+        filter: brightness(1.1) contrast(1.2);
+        mix-blend-mode: multiply;   
+    }
+
+    .imagenes{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+</style>
+<body>
+    <div>
+        <div>
+            <h1>CONTACTOS   </h1>
+        </div>
+        <div class="imagenes">
+            <img class="yo"
+            alt="YO-1"
+            src="https://st3.depositphotos.com/6436316/14556/v/450/depositphotos_145561933-stock-illustration-hacker-on-laptop-icon-cartoon.jpg">
+            
+            <img class="yo2" class="yo2-1"
+            alt="YO-2"
+            src="https://media.istockphoto.com/id/1396319474/es/vector/hacker-ciberdelincuente-con-computadora-port%C3%A1til-que-roba-datos-personales-del-usuario.jpg?s=612x612&w=0&k=20&c=3JAJqeu9ZKJYodCvi7c5Ak5l6wQYqRgniKI2pk1v3Wo=">
+        </div>
+    </div>
+</body>
+</html>
