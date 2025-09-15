@@ -1,6 +1,8 @@
 body{
     padding: 0px;
     margin: 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    background-color: black;
 }
 
 .encabezado{
@@ -34,7 +36,6 @@ li{
     margin-right: 10px;
     padding:auto 10px;
     cursor: pointer;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 li:hover{
@@ -79,6 +80,7 @@ li:hover{
     height: 100%;
     object-fit: cover;
     z-index: -1; /* para que el video quede detrás del contenido */
+    filter: contrast(120%);
 }
 
 .contenido {
@@ -104,4 +106,72 @@ li:hover{
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
+    /*box-shadow: 
+    desplazamientoX - desplazamientoY - difuminado - expansión color;*/
+    box-shadow: 0 0 10px 10px rgba(235, 8, 8, 0.25);
+}
+
+#btnPrincipal2:hover{
+    transform: scale(1.1);
+    background-color: rgb(35, 35, 224);
+    box-shadow: 0 0 10px 10px rgba(3, 41, 211, 0.25);
+}
+
+.cuerpoPrincipal{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+}
+
+.cat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#subT{
+    margin-left: 50px;
+}
+#imgCat:hover{
+    transform: scale(1.08);
+    border-radius: 10px;
+}
+
+#imgItachi {
+    filter: drop-shadow(0 0 10px rgba(255, 242, 129, 0.801));
+    padding: 30px;
+}
+
+#imgItachi:hover{
+    filter: drop-shadow(0 0 10px rgba(255, 10, 10, 0.699));
+    padding: 30px;
+}
+
+.info{
+    margin-top: 10px;
+    background-color:#ec1919;
+}
+
+.infoItach{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+}
+#ita{
+    background-color: black;
+    border-radius: 15px;
+    margin: 15PX;
+}
+#ita2{
+    background-color: #ffffff;
+    color: black;
+    border-radius: 15px;
+    margin: 15PX;
+
+}
+#ita2 p{
+    padding-left: 20px;
+    padding-right: 20px;
 }
