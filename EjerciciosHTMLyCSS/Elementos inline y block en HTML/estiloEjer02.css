@@ -1,0 +1,24 @@
+h1{
+    color: crimson;
+    text-align: center;
+}
+
+h2{
+    color:rgb(211, 43, 226);
+
+}
+
+p{
+    color: #21355c;
+}
+
+div{
+    border: 10px solid #3b056d;
+    background-color: bisque;
+    text-align: center;
+}
+
+
+div h2{
+    color: blue;
+}

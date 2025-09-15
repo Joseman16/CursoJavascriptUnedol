@@ -1,8 +1,17 @@
 ol{
     list-style: none;
-
+    counter-reset: contador; /*Se resetea el contador, por cada clase que agregamos*/
 }
 
-ol li::{
+ol li{
+    counter-increment: contador; /*Se incrementa por la cantidad de clases agregadas*/
+}
 
+ol li::before{
+    content: 'Curso ' counter(contador) ') '; /*Contador incia en 0*/
+    color: firebrick;
+}
+
+ol li::after{
+    content:  '.';
 }

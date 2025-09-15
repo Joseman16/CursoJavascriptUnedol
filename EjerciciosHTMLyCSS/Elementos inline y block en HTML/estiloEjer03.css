@@ -1,0 +1,17 @@
+h1{
+    color: crimson;
+    text-align: center;
+}
+h2{
+    color: darkblue;
+}
+
+p{
+    color: rgb(41, 61, 99);
+}
+
+.tarjeta{
+    border: 10px solid #560bad;
+    background-color: blanchedalmond;
+    text-align: center;
+}
