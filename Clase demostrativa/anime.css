@@ -1,0 +1,107 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.encabezado{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: black;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#logoAnime:hover{
+    transform: scale(1.2);
+}
+
+div ul{
+    color: aliceblue;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:auto 10px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+li:hover{
+    background-color: rgba(248, 79, 79, 0.932);
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+    box-shadow: tomato;
+}
+
+
+.fi-brands-github {
+    font-size: 32px;     /* tamaño */
+    color: #ffffff;          /* color */
+}
+
+.encDerecho{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+#img1{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.cuerpo {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* o la altura que necesites */
+    overflow: hidden;
+}
+
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* para que el video quede detrás del contenido */
+}
+
+.contenido {
+    position: relative;
+    z-index: 1;
+    color: rgb(249, 235, 255); /* asegúrate de que el texto se vea sobre el video */
+    text-align: center;
+    padding-top: 20%;
+}
+
+.btnPrincipal{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+}
+
+#btnPrincipal2{
+    background-color: #ec1919;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
