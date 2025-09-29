@@ -1,0 +1,13 @@
+1.Comando para crear el package.json
+-> npm init -y
+
+2.Cambiar el "type": "commonjs" a
+-> "type": "module"
+
+3. Agregar el index.js en el scripts:
+"scripts": {
+    "start": "node index.js"
+  },
+
+4. Instalamos: El background-removal-node
+-> npm i @imgly/background-removal-node

@@ -1,0 +1,19 @@
+{
+  "name": "node_background",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
+    "express": "^5.1.0",
+    "googleapis": "^160.0.0",
+    "multer": "^2.0.2"
+  }
+}
